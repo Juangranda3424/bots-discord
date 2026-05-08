@@ -3,6 +3,20 @@ require('dotenv').config();
 const fs = require('fs');
 const XLSX = require('xlsx');
 
+/// SERVIDOR WEB PARA ENGAÑAR A RENDER
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Bot funcionando');
+});
+
+app.listen(3000, () => {
+    console.log('Servidor web activo');
+});
+
+///
+
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
