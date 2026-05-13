@@ -1,0 +1,6 @@
+.env.general
+.env.comercial
+.env.contabilidad
+node_modules
+asistencia.xlsx
+multas.xlsx

@@ -1,0 +1,23 @@
+services:
+  bot-reuniones-general:
+    image: bot-transcriptor-plus:latest
+    container_name: bot-reuniones-general
+    restart: always
+    env_file:
+      - .env.general
+
+
+  bot-reuniones-contabilidad:
+    image: bot-transcriptor-plus:latest
+    container_name: bot-reuniones-contabilidad
+    restart: always
+    env_file:
+      - .env.contabilidad
+
+
+  bot-reuniones-comercial:
+    image: bot-transcriptor-plus:latest
+    container_name: bot-reuniones-comercial
+    restart: always
+    env_file:
+      - .env.comercial
