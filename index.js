@@ -98,7 +98,8 @@ const palabrasSalida = [
     'hora de salida',
     'ya sali',
     'ya salí',
-    'saliendo'
+    'saliendo',
+    'almuerzo'
 ];
 
 // FUNCION GUARDAR EXCEL
@@ -184,7 +185,9 @@ client.on('messageCreate', message => {
 
     // DETECTAR ENTRADA
     const entrada = palabrasEntrada.some(palabra =>
-        texto.includes(palabra)
+        texto.includes(palabra) && !palabrasSalida.some(palabraSalida =>
+            texto.includes(palabraSalida)
+        )
     );
 
     // DETECTAR SALIDA
